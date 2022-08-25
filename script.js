@@ -1,5 +1,9 @@
      
-
+var proPic;
+var userName;
+var gitFollowers;
+var gitFollowing;
+var gitRepos;
 function filterData(){
    const searchInp = document.getElementById('searchUser').value;
    gitApiData();   
@@ -16,11 +20,12 @@ function filterData(){
                     const mainUser = await fetch(`https://api.github.com/users/${userData.login}`);
                     singleUser =  await mainUser.json();
                     // Data Fromatting
-                    document.getElementById('proPic').src = singleUser.avatar_url;
-                    document.getElementById('userName').innerHTML = singleUser.login;
-                    document.getElementById('gitFollowers').innerHTML =singleUser.followers+' Followers';
-                    document.getElementById('gitFollowing').innerHTML =singleUser.following+' Following'; 
-                    document.getElementById('gitRepos').innerHTML =singleUser.public_repos+' Repos';
+                   proPic = document.getElementById('proPic').src = singleUser.avatar_url;
+                   userName = document.getElementById('userName').innerHTML = singleUser.login;
+                   gitFollowers = document.getElementById('gitFollowers').innerHTML =singleUser.followers+' Followers';
+                   gitFollowing = document.getElementById('gitFollowing').innerHTML =singleUser.following+' Following'; 
+                   gitRepos = document.getElementById('gitRepos').innerHTML =singleUser.public_repos+' Repos';
+                   showProfile(proPic,userName,gitFollowers,gitFollowing,gitRepos);
                 }
 
            }
@@ -28,8 +33,7 @@ function filterData(){
    }
 }
 
-function showProfile(data){ 
-    console.log(data,"mydata");   
-//enter name data url in here
-document.getElementById('profile').innerHTML =data;
-};
+function showProfile(proPic,userName,gitFollowers,gitFollowing,gitRepos){ 
+   console.log(proPic,"mydata");
+   document.getElementById('gitproPic').src = proPic; 
+   };

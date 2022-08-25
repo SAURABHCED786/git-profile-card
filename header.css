@@ -13,6 +13,9 @@
 	font-size:25px;font-weight:700;letter-spacing:0.1em;
     font-family: 'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive;
 }
+a.navbar-brand svg {
+    margin-top: -5px;
+}	
 .navbar-brand {
 	color: #fff;
 	font-size:25px;
@@ -33,13 +36,18 @@
 .navbar-expand-md .navbar-nav .dropdown-menu{
 	border-top:3px solid #fed136;
 }
-.dropdown-item:hover{background-color:#fed136;color:#fff;}
+.dropdown-item:hover{
+	background-color:#fed136;color:#fff;
+}
+ul.dropdown-menu.show {
+    border-top: 2px solid gold;
+}
 nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
     -moz-transition: padding-top .3s,padding-bottom .3s;
     transition: padding-top .3s,padding-bottom .3s;
     border: none;
 	}
-	
+
  .shrink {
     padding-top: 0;
     padding-bottom: 0;

@@ -57,3 +57,57 @@ a.visitProBtn {
     margin-top: 3rem;
     text-shadow: 7px 5px 10px black;
 }
+.tab {
+    padding: 16px;
+    margin-right: 6rem;
+    text-align: right;
+}
+.tabcontent{
+    display: none;
+}.profile-info img {
+    width: 63%;
+    box-shadow: -15px 0px 35px #595959;
+}
+button.tablinks {
+    background-image: linear-gradient(349deg, #937be0 , #0081ff8a);
+    border: none;
+    padding: 7px;
+    width: 131px;
+    border-radius: 50px;
+}
+.tablinks:focus:not(:focus-visible) {
+    outline: 0;
+    box-shadow: 0px 0px 6px #1c1c1c inset;
+    color: white;
+    font-weight: 600;
+}
+.profile-info img {
+    width: 63%;
+    box-shadow: -15px 0px 35px #595959;
+}
+h2.gitName {
+    margin-top: 25px;
+    text-transform: capitalize;
+    font-size: 39px;
+}
+h3.gituserName {
+    text-transform: lowercase;
+    font-size: 22px;
+}
+.FollowBtn {
+    width: 50%;
+    height: 29px;
+    border: none;
+    border-radius: 17px;
+    font-weight: 300;
+    font-size: 17px;
+    background: #e7e7e7;
+    box-shadow: 0px 0px 3px black;
+}
+p.followers {
+    margin-top: 15px;
+}
+/* for some time i will disply none of the footer */
+/* footer.bg-dark.text-center.text-white.fixed-bottom {
+    display: none;
+} */
