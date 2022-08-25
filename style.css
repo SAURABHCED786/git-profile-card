@@ -1,0 +1,59 @@
+.bg{
+    background-image: linear-gradient(95deg, #0056a1 , #5e5effb3);
+}
+.inpField {
+    margin-top: 98px;
+    padding: 37px;
+    background: #8696bee6;
+    text-align: center;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 2px 2px 6px currentColor;
+}
+i.fa.fa-search {
+    position: absolute;
+    font-size: 15px;
+    margin: 14px 10px;
+}
+input#searchUser {
+    height: 42px;
+    width: 50%;
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding-left: 32px;
+}
+.pro_avtar {
+    width: 100%;
+    position: inherit;
+    border-radius: 50%;
+}
+.profile-card {
+    display: none;
+    padding: 3%;
+    margin: 21px;
+    background: lavender;
+    border-radius: 8px;
+}
+h2.userName {
+    margin-top: 30px;
+    display: inline-block;
+}
+a.visitProBtn {
+    margin-left: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    height: 25px;
+    width: 80px;
+    margin-top: -10px;
+}
+.row.text-center.proData {
+    margin-top: 40px;
+}
+.profile-about {
+    position: inherit !important;
+    text-align: center;
+    color: white;
+    margin-top: 3rem;
+    text-shadow: 7px 5px 10px black;
+    margin-bottom: 9rem;
+}
