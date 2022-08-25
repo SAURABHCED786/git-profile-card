@@ -10,7 +10,7 @@ function filterData(){
            //console.log(userData.login);
            if(userData.login == searchInp){
                 //Show Profile popup
-                document.getElementsByClassName('profile-card').style.dispay="block";
+                document.getElementById('profile-card').style.display='block';
                 singleGitUsers();
                 async function singleGitUsers(){
                     const mainUser = await fetch(`https://api.github.com/users/${userData.login}`);

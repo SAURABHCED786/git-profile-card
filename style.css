@@ -31,6 +31,7 @@ input#searchUser {
     display: none;
     padding: 3%;
     margin: 21px;
+    margin-bottom: 9rem;
     background: lavender;
     border-radius: 8px;
 }
@@ -55,5 +56,4 @@ a.visitProBtn {
     color: white;
     margin-top: 3rem;
     text-shadow: 7px 5px 10px black;
-    margin-bottom: 9rem;
 }
