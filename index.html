@@ -27,7 +27,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<body class="bg">
+<body class="bg" onload="filterData();">
     <header>
         <!------ Include the above in your HEAD tag ---------->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top shrinkrm" id="banner">
@@ -86,23 +86,23 @@
                 <div class="profile-card" id="profile-card">
                     <div class="row">
                         <div class="col-sm-3 col-md-3 col-lg-3">
-                            <img src="https://avatars.githubusercontent.com/u/35?v=4" class="pro_avtar" name="proPic" id="proPic"
-                                alt="Profile Picture" />
+                            <img src="https://avatars.githubusercontent.com/u/35?v=4" class="pro_avtar" name="proPic"
+                                id="proPic" alt="Profile Picture" />
                         </div>
                         <div class="col-sm-9 col-md-9 col-lg-9">
-                            <h2 class="userName" id="userName" onload="showProfile(this);">Khushi</h2>
+                            <h2 class="userName" id="userName">Khushi</h2>
                             <a class="visitProBtn btn btn-sm btn-info" href="./profile.html"
                                 rel="noopener noreferrer">Visit Profile</a>
                             <p class="status">Learning to Learn</p>
                             <div class="row text-center proData">
                                 <div class="col-sm-4 col-md-4 col-lg-4">
-                                    <p id="gitFollowers" onload="showProfile(this);">Followers</p>
+                                    <p id="gitFollowers">Followers</p>
                                 </div>
                                 <div class="col-sm-4 col-md-4 col-lg-4">
-                                    <p id="gitFollowing" onload="showProfile(this);">Following</p>
+                                    <p id="gitFollowing">Following</p>
                                 </div>
                                 <div class="col-sm-4 col-md-4 col-lg-4">
-                                    <p id="gitRepos" onload="showProfile(this);">Repos</p>
+                                    <p><span id="gitRepos"> </span>&nbsp;<span>Repos</span></p>
                                 </div>
                             </div>
                         </div>
@@ -116,29 +116,29 @@
         <!-- Grid container -->
         <div class="container">
             <!-- Section: Social media -->
-            <section class="mb-2 pt-2">
+            <section class="mb-1 pt-1">
                 <!-- Facebook -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                <a class="btn btn-sm btn-outline-light btn-floating m-1" href="#!" role="button"><i
                         class="fab fa-facebook-f"></i></a>
 
                 <!-- Twitter -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                <a class="btn btn-sm btn-outline-light btn-floating m-1" href="#!" role="button"><i
                         class="fab fa-twitter"></i></a>
 
                 <!-- Google -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                <a class="btn btn-sm btn-outline-light btn-floating m-1" href="#!" role="button"><i
                         class="fab fa-google"></i></a>
 
                 <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                <a class="btn btn-sm btn-outline-light btn-floating m-1" href="#!" role="button"><i
                         class="fab fa-instagram"></i></a>
 
                 <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                <a class="btn btn-sm btn-outline-light btn-floating m-1" href="#!" role="button"><i
                         class="fab fa-linkedin-in"></i></a>
 
                 <!-- Github -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                <a class="btn btn-sm btn-outline-light btn-floating m-1" href="#!" role="button"><i
                         class="fab fa-github"></i></a>
             </section>
             <!-- Section: Social media -->

@@ -90,7 +90,7 @@
         </nav>
     </header>
     <!-- Main Content -->
-    <div class="row">
+    <div class="row" style="margin-bottom: 4.5rem">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -112,6 +112,7 @@
                                 </path>
                             </svg>
                             Repositories
+                            <span id="reposValue">20</span>
                         </button>
                         <button class="tablinks" onclick="openTab(event, 'projects')">
                             <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
@@ -151,7 +152,7 @@
                         </button>
                     </div>
                     <script>
-                        function openTab(evt, cityName) {
+                        function openTab(evt, tabBtn) {
                             var i, tabcontent, tablinks;
                             tabcontent = document.getElementsByClassName("tabcontent");
                             for (i = 0; i < tabcontent.length; i++) {
@@ -161,7 +162,7 @@
                             for (i = 0; i < tablinks.length; i++) {
                                 tablinks[i].className = tablinks[i].className.replace(" active", "");
                             }
-                            document.getElementById(cityName).style.display = "block";
+                            document.getElementById(tabBtn).style.display = "block";
                             evt.currentTarget.className += " active";
                         }
                     </script>
@@ -173,20 +174,31 @@
                             <img src="https://avatars.githubusercontent.com/u/35?v=4" class="pro_avtar" id="gitproPic"
                                 alt="Profile Picture" />
                             <div class="row">
-                                <h2 class="gitName">Khushi</h2>
+                                <h2 class="gitName" id="gitName">Khushi</h2>
                                 <h3 class="gituserName" id="userName">khushi101</h3>
                                 <form action="#">
                                     <button type="button" class="FollowBtn">Follow</button>
                                 </form>
                                 <p class="followers">
-                                     <svg text="muted" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1"
+                                    <svg text="muted" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1"
                                         width="16" data-view-component="true" class="octicon octicon-people">
                                         <path fill-rule="evenodd"
                                             d="M5.5 3.5a2 2 0 100 4 2 2 0 000-4zM2 5.5a3.5 3.5 0 115.898 2.549 5.507 5.507 0 013.034 4.084.75.75 0 11-1.482.235 4.001 4.001 0 00-7.9 0 .75.75 0 01-1.482-.236A5.507 5.507 0 013.102 8.05 3.49 3.49 0 012 5.5zM11 4a.75.75 0 100 1.5 1.5 1.5 0 01.666 2.844.75.75 0 00-.416.672v.352a.75.75 0 00.574.73c1.2.289 2.162 1.2 2.522 2.372a.75.75 0 101.434-.44 5.01 5.01 0 00-2.56-3.012A3 3 0 0011 4z">
                                         </path>
                                     </svg>
-                                    <span>Followers</span>
+                                    <span id="followers">Followers</span>
+                                    <span id="following">Following</span>
+                                <div class="profileDetails">
+                                    <ul>
+                                        <li><b id="company">Company</b></li>
+                                        <li id="location">Location</li>
+                                        <li id="mail">Mail</li>
+                                        <li id="profileWebsite">Profile Website</li>
+                                        <li id="socialMedia">Social Media</li>
+                                    </ul>
+                                </div>
                                 </p>
+
                             </div>
                         </div>
 
@@ -249,29 +261,29 @@
         <!-- Grid container -->
         <div class="container">
             <!-- Section: Social media -->
-            <section class="mb-2 pt-2">
+            <section class="mb-1 pt-1">
                 <!-- Facebook -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                <a class="btn btn-sm btn-outline-light btn-floating m-1" href="#!" role="button"><i
                         class="fab fa-facebook-f"></i></a>
 
                 <!-- Twitter -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                <a class="btn btn-sm btn-outline-light btn-floating m-1" href="#!" role="button"><i
                         class="fab fa-twitter"></i></a>
 
                 <!-- Google -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                <a class="btn btn-sm btn-outline-light btn-floating m-1" href="#!" role="button"><i
                         class="fab fa-google"></i></a>
 
                 <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                <a class="btn btn-sm btn-outline-light btn-floating m-1" href="#!" role="button"><i
                         class="fab fa-instagram"></i></a>
 
                 <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                <a class="btn btn-sm btn-outline-light btn-floating m-1" href="#!" role="button"><i
                         class="fab fa-linkedin-in"></i></a>
 
                 <!-- Github -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                <a class="btn btn-sm btn-outline-light btn-floating m-1" href="#!" role="button"><i
                         class="fab fa-github"></i></a>
             </section>
             <!-- Section: Social media -->
@@ -285,6 +297,53 @@
         </div>
         <!-- Copyright -->
     </footer>
+    <script>
+        pic = window.localStorage.getItem("profilePic");
+        profilePicter = document.getElementById("gitproPic").src = pic;
+        userName = window.localStorage.getItem("userName");
+        document.getElementById("userName").innerHTML = userName;
+        gitName = window.localStorage.getItem("gitName");
+        document.getElementById("gitName").innerHTML = gitName;
+        gitFollowers = window.localStorage.getItem("gitfollowers");
+        gitFollowing = window.localStorage.getItem("gitfollowing");
+        totalFollowing = intToString(gitFollowing);
+        document.getElementById("following").innerHTML = "<b>" + totalFollowing + "</b>" + " Following";
+        gitRepos = window.localStorage.getItem("gitRepos");
+        document.getElementById('reposValue').innerHTML = gitRepos;
+        var totalFollowers = intToString(gitFollowers);
+        function intToString(num) {
+            num = num.toString().replace(/[^0-9.]/g, '');
+            if (num < 1000) {
+                return num;
+            }
+            let si = [
+                { v: 1E3, s: "K" },
+                { v: 1E6, s: "M" },
+                { v: 1E9, s: "B" },
+                { v: 1E12, s: "T" },
+                { v: 1E15, s: "P" },
+                { v: 1E18, s: "E" }
+            ];
+            let index;
+            for (index = si.length - 1; index > 0; index--) {
+                if (num >= si[index].v) {
+                    break;
+                }
+            }
+            return (num / si[index].v).toFixed(2).replace(/\.0+$|(\.[0-9]*[1-9])0+$/, "$1") + si[index].s;
+        }
+        document.getElementById("followers").innerHTML = "<b>" + totalFollowers + "</b>" + " Followers";
+        gitCompany = window.localStorage.getItem("gitCompany");
+        document.getElementById('company').innerHTML = gitCompany;
+        gitLocation = window.localStorage.getItem("gitLocation");
+        document.getElementById('location').innerHTML = gitLocation;
+        gitMail = window.localStorage.getItem("gitMail");
+        document.getElementById('mail').innerHTML = gitMail+"@gmail.com";
+        gitBlog = window.localStorage.getItem("gitBlog");
+        document.getElementById('profileWebsite').innerHTML = "<a href="+gitBlog+">"+gitBlog+"</a>";
+        gitTwitter = window.localStorage.getItem("gitTwitter");
+        document.getElementById('socialMedia').innerHTML = "<a href='https://twitter.com/"+gitTwitter+"'>@ "+gitTwitter+"</a>";
+    </script>
 </body>
 
 </html>

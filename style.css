@@ -1,6 +1,7 @@
-.bg{
-    background-image: linear-gradient(95deg, #0056a1 , #5e5effb3);
+.bg {
+    background-image: linear-gradient(95deg, #0056a1, #5e5effb3);
 }
+
 .inpField {
     margin-top: 98px;
     padding: 37px;
@@ -10,11 +11,13 @@
     border-radius: 12px;
     box-shadow: 2px 2px 6px currentColor;
 }
+
 i.fa.fa-search {
     position: absolute;
     font-size: 15px;
     margin: 14px 10px;
 }
+
 input#searchUser {
     height: 42px;
     width: 50%;
@@ -22,11 +25,13 @@ input#searchUser {
     border-radius: 8px;
     padding-left: 32px;
 }
+
 .pro_avtar {
     width: 100%;
     position: inherit;
     border-radius: 50%;
 }
+
 .profile-card {
     display: none;
     padding: 3%;
@@ -35,10 +40,13 @@ input#searchUser {
     background: lavender;
     border-radius: 8px;
 }
+
 h2.userName {
     margin-top: 30px;
+    text-transform: lowercase;
     display: inline-block;
 }
+
 a.visitProBtn {
     margin-left: 12px;
     font-size: 11px;
@@ -47,9 +55,11 @@ a.visitProBtn {
     width: 80px;
     margin-top: -10px;
 }
+
 .row.text-center.proData {
     margin-top: 40px;
 }
+
 .profile-about {
     position: inherit !important;
     text-align: center;
@@ -57,43 +67,62 @@ a.visitProBtn {
     margin-top: 3rem;
     text-shadow: 7px 5px 10px black;
 }
+
 .tab {
+    background-image: linear-gradient(111deg, #888afb, #0257a3);
+    border-top: 1px solid #0000004d;
     padding: 16px;
-    margin-right: 6rem;
+    padding-right: 6rem;
     text-align: right;
+    border-bottom: 1px solid #5a5a5ad6;
 }
-.tabcontent{
+
+.tabcontent {
     display: none;
-}.profile-info img {
-    width: 63%;
-    box-shadow: -15px 0px 35px #595959;
 }
-button.tablinks {
-    background-image: linear-gradient(349deg, #937be0 , #0081ff8a);
-    border: none;
-    padding: 7px;
-    width: 131px;
-    border-radius: 50px;
+
+.profile-info {
+    padding-top: 20px;
+    border-right: 1px solid #000000c2;
 }
-.tablinks:focus:not(:focus-visible) {
-    outline: 0;
-    box-shadow: 0px 0px 6px #1c1c1c inset;
-    color: white;
-    font-weight: 600;
-}
+
 .profile-info img {
     width: 63%;
     box-shadow: -15px 0px 35px #595959;
 }
+
+button.tablinks {
+    background-image: linear-gradient(349deg, #937be0, #0081ff8a);
+    border: none;
+    padding: 5px;
+    width: 9.9rem;
+    box-shadow: 0px 0px 13px midnightblue;
+    border-radius: 50px;
+}
+
+.tablinks:focus:not(:focus-visible) {
+    outline: 0;
+    box-shadow: 0px 0px 6px midnightblue inset;
+    color: white;
+    font-weight: 600;
+}
+
+.profile-info img {
+    width: 63%;
+    box-shadow: -15px 0px 35px #595959;
+}
+
 h2.gitName {
     margin-top: 25px;
     text-transform: capitalize;
     font-size: 39px;
 }
+
 h3.gituserName {
     text-transform: lowercase;
     font-size: 22px;
 }
+
 .FollowBtn {
     width: 50%;
     height: 29px;
@@ -104,9 +133,73 @@ h3.gituserName {
     background: #e7e7e7;
     box-shadow: 0px 0px 3px black;
 }
+.FollowBtn:focus:not(:focus-visible) {
+    background: linear-gradient(45deg, #7c8ef6, #8d57dfe3);
+    box-shadow: none;
+}
+
 p.followers {
     margin-top: 15px;
 }
+
+#following b,
+#followers b {
+    color: black;
+}
+
+span#followers,
+span#following {
+    color: #242424f2;
+    font-size: 14px;
+}
+
+.profileDetails ul {
+    margin-left: 40px;
+    list-style: none;
+    text-align: left;
+    font-size: 14px;
+    color: black;
+}
+ul #company,#location,#mail,#profileWebsite, #socialMedia {
+    position: relative;
+}
+ul #company::before ,#location::before, #mail::before,#profileWebsite::before,#socialMedia::before {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #57606a;
+    font-size: 15px;
+    position: absolute;
+    top: -1px;
+    left: -22px;
+}
+
+ul #company::before{
+    content: "\f1ac";
+}
+ul #location::before{
+    content: "\f041";
+}
+ul #mail::before{
+    content: "\f003";
+}
+ul #profileWebsite::before{
+    content: "\f0c1";
+}
+ul #socialMedia::before{
+    content: "\f099";
+}
+
+ul #profileWebsite a , ul #socialMedia a{
+    text-decoration: none;
+    color: black;
+}
+ul #profileWebsite a:hover , ul #socialMedia a:hover{
+    text-decoration: underline;
+    color: rgb(33, 33, 243);
+}
+
 /* for some time i will disply none of the footer */
 /* footer.bg-dark.text-center.text-white.fixed-bottom {
     display: none;
