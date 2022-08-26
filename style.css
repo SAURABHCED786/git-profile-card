@@ -199,7 +199,14 @@ ul #profileWebsite a:hover , ul #socialMedia a:hover{
     text-decoration: underline;
     color: rgb(33, 33, 243);
 }
-
+@media only screen and (max-width: 600px) {
+    .tab .tablinks {
+        margin: 4px;
+    }
+    .profile-info{
+        border: none;
+    }
+  }
 /* for some time i will disply none of the footer */
 /* footer.bg-dark.text-center.text-white.fixed-bottom {
     display: none;
