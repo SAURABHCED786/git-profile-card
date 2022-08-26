@@ -2,16 +2,17 @@ function filterData() {
    const searchInp = document.getElementById('searchUser').value;
    gitApiData();
    async function gitApiData() {
-      const gitUser = await fetch('https://api.github.com/users');
-      allUser = await gitUser.json();
-      allUser.forEach(userData => {
+      //const gitUser = await fetch('https://api.github.com/users');
+      //allUser = await gitUser.json();
+      //allUser.forEach(userData => {
          //console.log(userData.login);
-         if (userData.login == searchInp || searchInp.includes(userData.login)) {
+        // userData.login == searchInp || searchInp.includes(userData.login)
+         if (searchInp) {
             //Show Profile popup
             document.getElementById('profile-card').style.display = 'block';
             singleGitUsers();
-            async function singleGitUsers() {
-               const mainUser = await fetch(`https://api.github.com/users/${userData.login}`);
+            async function singleGitUsers() {                             //userData.login
+               const mainUser = await fetch(`https://api.github.com/users/${searchInp}`);
                singleUser = await mainUser.json();
                // Data Fromatting
                proPic = document.getElementById('proPic').src = singleUser.avatar_url;
@@ -28,7 +29,7 @@ function filterData() {
                showProfile(proPic, gitName, userName, gitFollowers, gitFollowing, gitRepos, gitCompany, gitLoacation, gitMail, gitBlog, gitTwitter);
             }
          }
-      });
+      //});
    }
 }
 
